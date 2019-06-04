@@ -21,21 +21,25 @@
     //页面标题
     self.navigationItem.title = @"扫一扫";
     
-    SHCustomQRCodeView *qrcodeView = [[SHCustomQRCodeView alloc] initWithFrame:self.view.bounds];
     __weak typeof(self) weakSelf = self;
+    SHCustomQRCodeView *qrcodeView = [[SHCustomQRCodeView alloc] initWithFrame:self.view.bounds];
     qrcodeView.backQRCodeURL = ^(NSString *stringValue) {
-        NSLog(@"----------------扫描结果--------------------------\n%@",stringValue);
-        UIAlertController *alertV = [UIAlertController alertControllerWithTitle:@"二维码" message:stringValue preferredStyle:UIAlertControllerStyleAlert];
-        [alertV addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:nil]];
-        [alertV addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
-        [weakSelf presentViewController:alertV animated:YES completion:nil];
+        [weakSelf alertViewTitle:@"扫描成功" Message:stringValue];
+    };
+    qrcodeView.backfailure = ^{
+        [weakSelf alertViewTitle:@"扫描失败" Message:@"扫描失败"];
     };
     [self.view addSubview:qrcodeView];
 }
 
-- (void)dealloc
+- (void)alertViewTitle:(NSString *)title Message:(NSString *)message
 {
-    NSLog(@"----------dealloc---------");
+    __weak typeof(self) weakSelf = self;
+    UIAlertController *alertV = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertV addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }]];
+    [self presentViewController:alertV animated:YES completion:nil];
 }
 
 @end
