@@ -15,8 +15,8 @@
 		488C23F222A621B000B79202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 488C23F122A621B000B79202 /* main.m */; };
 		488C23FC22A621B000B79202 /* SHCustomQRCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 488C23FB22A621B000B79202 /* SHCustomQRCodeTests.m */; };
 		488C240722A621B000B79202 /* SHCustomQRCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 488C240622A621B000B79202 /* SHCustomQRCodeUITests.m */; };
-		488C241822A6227C00B79202 /* SHCustomQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488C241722A6227C00B79202 /* SHCustomQRCodeView.m */; };
 		488C241B22A6230600B79202 /* SHScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 488C241A22A6230600B79202 /* SHScanViewController.m */; };
+		488C241F22A6476900B79202 /* SHCustomQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488C241E22A6476900B79202 /* SHCustomQRCodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		488C240222A621B000B79202 /* SHCustomQRCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHCustomQRCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		488C240622A621B000B79202 /* SHCustomQRCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHCustomQRCodeUITests.m; sourceTree = "<group>"; };
 		488C240822A621B000B79202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		488C241622A6227C00B79202 /* SHCustomQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCustomQRCodeView.h; sourceTree = "<group>"; };
-		488C241722A6227C00B79202 /* SHCustomQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCustomQRCodeView.m; sourceTree = "<group>"; };
 		488C241922A6230600B79202 /* SHScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHScanViewController.h; sourceTree = "<group>"; };
 		488C241A22A6230600B79202 /* SHScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHScanViewController.m; sourceTree = "<group>"; };
+		488C241D22A6476900B79202 /* SHCustomQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCustomQRCodeView.h; sourceTree = "<group>"; };
+		488C241E22A6476900B79202 /* SHCustomQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCustomQRCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		488C23E122A621AF00B79202 /* SHCustomQRCode */ = {
 			isa = PBXGroup;
 			children = (
-				488C241522A6227C00B79202 /* SHCustomQRCode */,
+				488C241C22A6476900B79202 /* SHCustomQRCode */,
 				488C23E222A621AF00B79202 /* AppDelegate.h */,
 				488C23E322A621AF00B79202 /* AppDelegate.m */,
 				488C23E522A621AF00B79202 /* ViewController.h */,
@@ -141,11 +141,11 @@
 			path = SHCustomQRCodeUITests;
 			sourceTree = "<group>";
 		};
-		488C241522A6227C00B79202 /* SHCustomQRCode */ = {
+		488C241C22A6476900B79202 /* SHCustomQRCode */ = {
 			isa = PBXGroup;
 			children = (
-				488C241622A6227C00B79202 /* SHCustomQRCodeView.h */,
-				488C241722A6227C00B79202 /* SHCustomQRCodeView.m */,
+				488C241D22A6476900B79202 /* SHCustomQRCodeView.h */,
+				488C241E22A6476900B79202 /* SHCustomQRCodeView.m */,
 			);
 			path = SHCustomQRCode;
 			sourceTree = "<group>";
@@ -281,8 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				488C23E722A621AF00B79202 /* ViewController.m in Sources */,
+				488C241F22A6476900B79202 /* SHCustomQRCodeView.m in Sources */,
 				488C23F222A621B000B79202 /* main.m in Sources */,
-				488C241822A6227C00B79202 /* SHCustomQRCodeView.m in Sources */,
 				488C23E422A621AF00B79202 /* AppDelegate.m in Sources */,
 				488C241B22A6230600B79202 /* SHScanViewController.m in Sources */,
 			);
