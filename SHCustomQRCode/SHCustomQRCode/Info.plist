@@ -42,6 +42,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>没有相机扫个毛啊</string>
+	<string>没有相机扫不了啊</string>
 </dict>
 </plist>

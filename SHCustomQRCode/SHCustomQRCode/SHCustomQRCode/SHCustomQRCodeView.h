@@ -19,6 +19,5 @@ typedef void(^Backfailure)(void);
 @property (nonatomic,copy) Backfailure backfailure;
 
 + (instancetype)new NS_UNAVAILABLE;
-+ (instancetype)alloc NS_UNAVAILABLE;
 @end
 
